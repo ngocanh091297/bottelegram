@@ -486,6 +486,7 @@ Name: ${userLink2}`, { parse_mode: 'Markdown' })
                         'User-Agent': userAgent
                     },
                 })
+                console.log('nguoi ',nguoi ,user.data.data)
 
                 if (!nguoi || !nguoi.data.data || !nguoi.data.data.amount) {
                     return bot.sendMessage(chatId, "❌ Đăng nhập thất bại vì lý do: Tài khoản hoặc Mật khẩu không đúng 4", {
