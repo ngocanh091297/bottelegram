@@ -196,7 +196,7 @@ CREATE TABLE `copytinhieu_k3g88` (
 -- Cấu trúc bảng cho bảng `copytinhieu_trxhash`
 --
 
-CREATE TABLE `copytinhieu_trxhash` (
+CREATE TABLE `copytinhieu_vngo` (
   `id` int(11) NOT NULL,
   `id_group` varchar(256) NOT NULL,
   `chatid` varchar(256) NOT NULL,
@@ -909,7 +909,7 @@ ALTER TABLE `taikhoan_bdg`
 --
 -- Chỉ mục cho bảng `copytinhieu_vngo`
 --
-ALTER TABLE `copytinhieu_vngo_xanhdo`
+ALTER TABLE `copytinhieu_vngo`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -992,12 +992,14 @@ ALTER TABLE `tai_khoan_da_active`
 --
 -- AUTO_INCREMENT cho bảng `chienluoc_trxhash`
 --
+ALTER TABLE `copytinhieu_vngo`
+  ADD PRIMARY KEY (`id`);
 
 
 --
 -- AUTO_INCREMENT cho bảng `chienluoc_vngo`
 --
-ALTER TABLE `chienluoc_vngo_xanhdo`
+ALTER TABLE `copytinhieu_vngo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

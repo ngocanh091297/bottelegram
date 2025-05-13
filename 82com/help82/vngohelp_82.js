@@ -145,10 +145,10 @@ async function getInfor(token, refreshToken, username) {
                                 "token": user.data.data.token,
                                 "refreshToken": user.data.data.refreshToken,
                             }).where("id", tk.id)
-                            await db("users_telegram_d5go").update('Sign', user.data.data.token).where('usersname', username)
+                        
                             await db("users_telegram_vngo").update('Sign', user.data.data.token).where('usersname', username)
-                            await db("users_telegram_trxhash").update('Sign', user.data.data.token).where('usersname', username)
-                            await db("users_telegram_k3go").update('Sign', user.data.data.token).where('usersname', username)
+                            // await db("users_telegram_trxhash").update('Sign', user.data.data.token).where('usersname', username)
+                            // await db("users_telegram_k3go").update('Sign', user.data.data.token).where('usersname', username)
                             amount2 = await getInfor(user.data.data.token, user.data.data.refreshToken, username)
                         }
                     }
@@ -161,10 +161,10 @@ async function getInfor(token, refreshToken, username) {
                 await db("taikhoan_bdg").update({
                     'token': newtoken.data.data.token,
                 }).where('username', username)
-                await db("users_telegram_d5go").update('Sign', newtoken.data.data.token).where('usersname', username)
+             
                 await db("users_telegram_vngo").update('Sign', newtoken.data.data.token).where('usersname', username)
-                await db("users_telegram_trxhash").update('Sign', newtoken.data.data.token).where('usersname', username)
-                await db("users_telegram_k3go").update('Sign', newtoken.data.data.token).where('usersname', username)
+                // await db("users_telegram_trxhash").update('Sign', newtoken.data.data.token).where('usersname', username)
+                // await db("users_telegram_k3go").update('Sign', newtoken.data.data.token).where('usersname', username)
                 let body = {
                     language: 2,
                     random: It(),
@@ -213,10 +213,10 @@ async function getInfor(token, refreshToken, username) {
                                 "token": user.data.data.token,
                                 "refreshToken": user.data.data.refreshToken,
                             }).where("id", tk.id)
-                            await db("users_telegram_d5go").update('Sign', user.data.data.token).where('usersname', username)
+                         
                             await db("users_telegram_vngo").update('Sign', user.data.data.token).where('usersname', username)
-                            await db("users_telegram_trxhash").update('Sign', user.data.data.token).where('usersname', username)
-                            await db("users_telegram_k3go").update('Sign', user.data.data.token).where('usersname', username)
+                            // await db("users_telegram_trxhash").update('Sign', user.data.data.token).where('usersname', username)
+                            // await db("users_telegram_k3go").update('Sign', user.data.data.token).where('usersname', username)
                             amount2 = await getInfor(user.data.data.token, user.data.data.refreshToken, username)
                         }
                     }
@@ -361,10 +361,10 @@ Name: ${userLink2}`, { parse_mode: 'Markdown' })
                         tele_id: chatId,
                         usersname: arrary[1]
                     }).first()
-                    await db("users_telegram_d5go").update('status', 3).where('usersname', arrary[1])
+                 
                     await db("users_telegram_vngo").update('status', 3).where('usersname', arrary[1])
-                    await db("users_telegram_trxhash").update('status', 3).where('usersname', arrary[1])
-                    await db("users_telegram_k3go").update('status', 3).where('usersname', arrary[1])
+                    // await db("users_telegram_trxhash").update('status', 3).where('usersname', arrary[1])
+                    // await db("users_telegram_k3go").update('status', 3).where('usersname', arrary[1])
                     await db('taikhoan_bdg').where("username", arrary[1]).del()
                     await db('taikhoan_bdg').insert({
                         "username": arrary[1],

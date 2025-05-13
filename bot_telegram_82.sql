@@ -55,6 +55,7 @@ CREATE TABLE `chienluoc_vngo` (
 -- Table structure for table `lichsu_ma_group`
 --
 
+
 CREATE TABLE `lichsu_ma_group` (
   `id` int(11) NOT NULL,
   `issuenumber` varchar(256) NOT NULL,
@@ -125,7 +126,12 @@ CREATE TABLE `taikhoan_he_thong` (
 --
 -- Table structure for table `users_telegram_vngo`
 --
+ALTER TABLE users_telegram_vngo ADD COLUMN refreshToken TEXT;
 
+ALTER TABLE users_telegram_vngo ADD COLUMN refreshToken TEXT DEFAULT 'abc';
+mysql -u root -p
+pass123
+use bot_telegram_82
 CREATE TABLE `users_telegram_vngo` (
   `id` int(11) NOT NULL,
   `tele_id` varchar(256) NOT NULL,
