@@ -64,9 +64,9 @@ bot.on('message', async (msg) => {
                     })
                 }
             }
-            if (chatId==-1001759197056 && (check == '/' || check=="A") ) {
+            if (chatId==-4657940490 && (check == '/' || check=="A") ) {
                 
-                // return adminGroup.admingroup(chatId, msg, text, bot, messageId,"users_telegram_vngo" ,"copytinhieu_vngo")
+                return adminGroup.admingroup(chatId, msg, text, bot, messageId,"users_telegram_vngo" ,"copytinhieu_vngo")
             }
         }
         return
