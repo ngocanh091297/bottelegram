@@ -627,7 +627,7 @@ ${text_chat_item}`
 exports.batdau = async function (text, chatId, bot, checklogin, messageId) {
     let amount = await getInfor(checklogin.Sign, checklogin.refreshToken, checklogin.usersname)
 
-    if (amount && amount.data && amount.data.amount) {
+    if (amount && amount.data && amount.data.userId) {
         let json = checklogin.chienluoc.split(",");
         let text_cuoc = ""
         let count = 1
