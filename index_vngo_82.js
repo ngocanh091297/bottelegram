@@ -66,7 +66,7 @@ bot.on('message', async (msg) => {
             }
             if (chatId==-1001759197056 && (check == '/' || check=="A") ) {
                 
-                return adminGroup.admingroup(chatId, msg, text, bot, messageId,"users_telegram_vngo" ,"copytinhieu_vngo")
+                // return adminGroup.admingroup(chatId, msg, text, bot, messageId,"users_telegram_vngo" ,"copytinhieu_vngo")
             }
         }
         return
@@ -339,7 +339,7 @@ let db = require('knex')({
         host: '127.0.0.1',
         port: 3306,
         user: 'root',
-        password: '',
+        password: 'pass123',
         database: 'bot_telegram_82'
     }
 })
