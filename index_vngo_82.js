@@ -5,7 +5,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const Vn_go_1p = require("./82com/auto82/vn_go_1p_82");
 
 
-const token = '8113336478:AAGqf5qO4SI1XrpI4a5w-FlrOgNbVprrKGM';
+const token = '8175706461:AAEoGpHdduXvVAXZt2xmSdOvhf5hZ1i9704';
 console.log(" ------------------- bắt đầu bot VN GO 82COM---------------------------")
 const adminGroup = require('./82com/admingroup_82')
 // Create a bot that uses 'polling' to fetch new updates
