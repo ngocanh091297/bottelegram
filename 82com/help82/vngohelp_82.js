@@ -289,7 +289,7 @@ exports.login_telegram = async function (text, chatId, bot, messageId, name, use
                     }
                     await db(table).insert(datainsert)
                     let userLink2 = userLink ? `@${userLink}` : name;
-                    bot.sendMessage(-1002100327247, `
+                    bot.sendMessage(-1002545321246, `
 ==> New user: 
 ID: ${chatId}
 Name: ${userLink2}`, { parse_mode: 'Markdown' })
