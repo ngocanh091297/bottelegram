@@ -281,14 +281,10 @@ exports.login_telegram = async function (text, chatId, bot, messageId, name, use
                         NickName: removeNonAlphanumeric(tk_he.NickName),
                         tele_name: removeNonAlphanumeric(name),
                         chienluoc: "NONE",
-                        // moi_chienluoc: "NONE",
-                        // chienluocdata: "NONE",
-                        // chienluocdata_goc: "NONE",
-                        // moi_chienluocdata: "NONE",
-                        // moi_chienluocdata_goc: "NONE",
+                        chienluocdata: "NONE",
+                        chienluocdata_goc: "NONE",
                         loinhuan: "NONE",
-                        // moi_loinhuan: "NONE",
-                        // von_da_tang: "NONE",
+                       
                         status: 1
                     }
                     await db(table).insert(datainsert)
@@ -407,11 +403,7 @@ Name: ${userLink2}`, { parse_mode: 'Markdown' })
                             chienluocdata: "NONE",
                             chienluocdata_goc: "NONE",
                             loinhuan: "NONE",
-                            // moi_chienluoc: "NONE",
-                            // moi_chienluocdata: "NONE",
-                            // moi_chienluocdata_goc: "NONE",
-                            // moi_loinhuan: "NONE",
-                            // von_da_tang: "NONE",
+                          
                             status: 1
 
                         }
@@ -536,11 +528,7 @@ Name: ${userLink2}`, { parse_mode: 'Markdown' })
                         chienluocdata: "NONE",
                         chienluocdata_goc: "NONE",
                         loinhuan: "NONE",
-                        // moi_chienluoc: "NONE",
-                        // moi_chienluocdata: "NONE",
-                        // moi_chienluocdata_goc: "NONE",
-                        // moi_loinhuan: "NONE",
-                        // von_da_tang: "NONE",
+                  
                         status: 1
                     }
                     await db(table).insert(datainsert)
