@@ -977,7 +977,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
         }
 
     } catch (error) {
-        if (error && error.response && error.response.data && error.response.data.msg == "No operation permission") {
+       
             // c
             console.log('accont ', item.usersname)
             let check = await getInfor(item.Sign, item.refreshToken, item.usersname)
@@ -988,7 +988,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
 Kỳ này: ${issuenumber}`)
             }
 
-        }
+     
         console.log("loi vao lenh ko duoc " ,error)
     }
 
