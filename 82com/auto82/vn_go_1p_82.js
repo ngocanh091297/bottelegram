@@ -929,6 +929,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
                     'User-Agent': userAgent
                 },
             })
+            console.log('result ',result)
 
         } else {
             result = {
