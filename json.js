@@ -63,7 +63,7 @@ Tài khoản 0909000000, mật khẩu 123456789
 LOGIN
 0909000000
 123456789`
-const chuadangnhap = `Chào mừng Bạn đến với Auto BDG!
+const chuadangnhap = `Chào mừng Bạn đến với Auto 82VN!
 
 🆔 ID của bạn là: 1036111895
 
@@ -86,7 +86,7 @@ class poker_repository {
     }
 
     async send_dang_nhap(name, chatId, messageId, bot) {
-        let text = `Chào mừng ${name} đến với Auto BDG!
+        let text = `Chào mừng ${name} đến với Auto 82VN!
 
 🆔 ID của bạn là: ${chatId}
 

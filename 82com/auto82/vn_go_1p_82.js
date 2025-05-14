@@ -680,22 +680,22 @@ async function getInfor(token, refreshToken, username) {
                             "token": user.data.data.token,
                             "refreshToken": user.data.data.refreshToken,
                         }).where("id", tk.id)
-                        await db("users_telegram_d5go").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
+                        // await db("users_telegram_d5go").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
                         await db("users_telegram_vngo").update({
                             'Sign': user.data.data.token,
                             "refreshToken": user.data.data.refreshToken
                         }).where('usersname', username)
-                        await db("users_telegram_trxhash").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
-                        await db("users_telegram_k3go").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
+                        // await db("users_telegram_trxhash").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
+                        // await db("users_telegram_k3go").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
                         status = {
                             status: true,
                             error: 1
@@ -712,10 +712,10 @@ async function getInfor(token, refreshToken, username) {
             await db("taikhoan_bdg").update({
                 'token': newtoken.data.data.token,
             }).where('username', username)
-            await db("users_telegram_d5go").update('Sign', newtoken.data.data.token).where('usersname', username)
+            // await db("users_telegram_d5go").update('Sign', newtoken.data.data.token).where('usersname', username)
             await db("users_telegram_vngo").update('Sign', newtoken.data.data.token).where('usersname', username)
-            await db("users_telegram_trxhash").update('Sign', newtoken.data.data.token).where('usersname', username)
-            await db("users_telegram_k3go").update('Sign', newtoken.data.data.token).where('usersname', username)
+            // await db("users_telegram_trxhash").update('Sign', newtoken.data.data.token).where('usersname', username)
+            // await db("users_telegram_k3go").update('Sign', newtoken.data.data.token).where('usersname', username)
             let body = {
                 language: 2,
                 random: It(),
@@ -769,22 +769,22 @@ async function getInfor(token, refreshToken, username) {
                             "token": user.data.data.token,
                             "refreshToken": user.data.data.refreshToken,
                         }).where("id", tk.id)
-                        await db("users_telegram_d5go").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
+                        // await db("users_telegram_d5go").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
                         await db("users_telegram_vngo").update({
                             'Sign': user.data.data.token,
                             "refreshToken": user.data.data.refreshToken
                         }).where('usersname', username)
-                        await db("users_telegram_trxhash").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
-                        await db("users_telegram_k3go").update({
-                            'Sign': user.data.data.token,
-                            "refreshToken": user.data.data.refreshToken
-                        }).where('usersname', username)
+                        // await db("users_telegram_trxhash").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
+                        // await db("users_telegram_k3go").update({
+                        //     'Sign': user.data.data.token,
+                        //     "refreshToken": user.data.data.refreshToken
+                        // }).where('usersname', username)
                         status = {
                             status: true,
                             error: 1
