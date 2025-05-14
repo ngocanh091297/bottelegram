@@ -877,40 +877,28 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
         }
         let body = {
             amount: 1000,
-            betCount: Math.round(parseInt(chienluoc_von[data_bet[item.usersname]]) / 1000),
-            gameType: 2,
+            betMultiple: Math.round(parseInt(chienluoc_von[data_bet[item.usersname]]) / 1000),
+            gameCode:"WinGo_1M",
             issuenumber: issuenumber,
-            language: 2,
+            language:'vi',
             random: It(),
-            // selectType: "H",
-            // signature: "7BC422BC2894CF55EC1B5056292A5D12",
+          
             timestamp: getTime_now(),
-            typeId: 1
+        
         }
-        let data = {
-            uid: item.UserId,
-            sign: item.Sign,
-            gametype: 2,
-            typeId: 1,
-            language: "vi",
-            amount: "1000",
-            betcount: Math.round(parseInt(chienluoc_von[data_bet[item.usersname]]) / 1000),
-            issuenumber: issuenumber
-
-        }
-
+     
         if (last == "N") {
             if (item.cainguoc == 'on') {
-                body.selectType = 13
+                body.betContent = "BigSmall_Big"
             } else {
-                body.selectType = 14
+                body.betContent = "BigSmall_Small"
             }
 
         } else {
             if (item.cainguoc == 'on') {
-                body.selectType = 14
+                body.betContent = "BigSmall_Small"
             } else {
-                body.selectType = 13
+                body.betContent = "BigSmall_Big"
             }
 
         }
@@ -922,7 +910,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
 
         if (body.betCount >= 1) {
             console.log('body ',body)
-            result = await axios.post("https://82vn82vnapi.com/api/webapi/GameBetting", body, {
+            result = await axios.post("https://h5.ar-lottery01.com/api/Lottery/WinGoBet", body, { // https://h5.ar-lottery01.com/api/Lottery/WinGoBet
                 headers: {
                     'content-type': 'application/json;charset=UTF-8',
                     'Authorization': `Bearer ${item.Sign}`,
