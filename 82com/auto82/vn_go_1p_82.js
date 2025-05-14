@@ -675,7 +675,7 @@ async function getInfor(token, refreshToken, username) {
                     })
 
                     if (user && user.data && user.data.code == 0 && user.data.data.token) {
-                        console.log('đăng nhập lại thanh công ', user.data)
+                        console.log('đăng nhập lại thanh công ', user.data.data.token ,username)
                         await db("taikhoan_bdg").update({
                             "token": user.data.data.token,
                             "refreshToken": user.data.data.refreshToken,
@@ -705,7 +705,7 @@ async function getInfor(token, refreshToken, username) {
 
             }
         });
-        console.log('check newtoken ', newtoken.data)
+      
 
         if (newtoken && newtoken.data && newtoken.data.data && newtoken.data.data.token) {
 
@@ -730,7 +730,7 @@ async function getInfor(token, refreshToken, username) {
             //         'User-Agent': userAgent
             //     },
             // })
-            console.log('check newtoken thành công')
+            console.log('check newtoken thành công',newtoken.data.data.token,username)
             status = {
                 status: true,
                 error: 0
@@ -764,7 +764,7 @@ async function getInfor(token, refreshToken, username) {
 
                     if (user && user.data && user.data.code == 0 && user.data.data.token) {
 
-                        console.log('đăng nhập lại thanh công 2', user.data)
+                        console.log('đăng nhập lại thanh công 2')
                         await db("taikhoan_bdg").update({
                             "token": user.data.data.token,
                             "refreshToken": user.data.data.refreshToken,
@@ -777,6 +777,7 @@ async function getInfor(token, refreshToken, username) {
                             'Sign': user.data.data.token,
                             "refreshToken": user.data.data.refreshToken
                         }).where('usersname', username)
+                        console.log('dã updte thanh cong ',user.data.data.token,username)
                         // await db("users_telegram_trxhash").update({
                         //     'Sign': user.data.data.token,
                         //     "refreshToken": user.data.data.refreshToken
