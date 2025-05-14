@@ -559,7 +559,7 @@ async function check_dk(issuenumber, bot) {
 
 
             await delay(1000)
-            console.log('list ',list)
+            console.log('list ',list ,total)
             for (let item of list) {
 
                 let json = JSON.parse(item.chienluocdata)
@@ -573,6 +573,7 @@ async function check_dk(issuenumber, bot) {
                     if (check === check2) {
                         //  đúng dk
                         // vào lệnh
+                        console.log('dav khop vao lenh ',item, element, issuenumber)
                         await vaolenhtaikhoan(item, element, issuenumber, bot)
                         break
                     }
