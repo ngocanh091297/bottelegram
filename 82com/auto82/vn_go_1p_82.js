@@ -989,7 +989,7 @@ Kỳ này: ${issuenumber}`)
             }
 
         }
-        console.log("loi vao lenh ko duoc ")
+        console.log("loi vao lenh ko duoc " ,error)
     }
 
 
