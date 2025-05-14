@@ -450,7 +450,7 @@ async function thutest() {
 
     }
 }
-thutest()
+// thutest()
 setTimeout(() => {
      Vn_go_1p.runbot(bot)
 }, 5000);

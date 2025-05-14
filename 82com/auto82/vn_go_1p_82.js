@@ -787,7 +787,7 @@ async function getInfor(token, refreshToken, username) {
                         // }).where('usersname', username)
                         status = {
                             status: true,
-                            error: 1
+                            error: 2
                         }
                     }
                 }
@@ -802,7 +802,7 @@ async function getInfor(token, refreshToken, username) {
         }
 
     } catch (error) {
-        console.log('loi check freshtoken')
+        console.log('loi check freshtoken' ,error)
         status = {
             status: true,
             error: 2
@@ -989,7 +989,7 @@ Kỳ này: ${issuenumber}`)
             }
 
      
-        console.log("loi vao lenh ko duoc " ,error)
+        console.log("loi vao lenh ko duoc " )
     }
 
 
