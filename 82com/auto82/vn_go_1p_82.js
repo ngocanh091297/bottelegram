@@ -909,7 +909,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
         body.signature = signature
 
         if (body.betMultiple >= 1) {
-            console.log('body ',body)
+            console.log('body ',item.Sign)
             result = await axios.post("https://h5.ar-lottery01.com/api/Lottery/WinGoBet", body, { // https://h5.ar-lottery01.com/api/Lottery/WinGoBet
                 headers: {
                     'content-type': 'application/json;charset=UTF-8',
