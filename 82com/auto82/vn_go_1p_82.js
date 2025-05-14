@@ -559,6 +559,7 @@ async function check_dk(issuenumber, bot) {
 
 
             await delay(1000)
+            console.log('list ',list)
             for (let item of list) {
 
                 let json = JSON.parse(item.chienluocdata)
