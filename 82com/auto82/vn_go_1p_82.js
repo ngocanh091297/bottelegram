@@ -261,7 +261,7 @@ async function test(bot) {
 
             if (timeToWait > 4000) {
                 //  gọi hàm đặt cược
-
+                 console.log('akkaka ',timeToWait,datalist)
 
                 await check_dk(datalist.issueNumber, bot)
             }
