@@ -58,9 +58,9 @@ async function tonghopphien(data_copy, gay, tim_kiem, tinhieu, bot) {
         for (let item of list) {
 
             if (item.dudoan == item.xoso) {
-                lai = lai + item.betcount
+                lai = lai + item.betMultiple
             } else {
-                lo = lo + item.betcount
+                lo = lo + item.betMultiple
             }
         }
         let currentTime = getCurrentTime();
@@ -908,7 +908,7 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
         let signature = getsignature(body)
         body.signature = signature
 
-        if (body.betCount >= 1) {
+        if (body.betMultiple >= 1) {
             console.log('body ',body)
             result = await axios.post("https://h5.ar-lottery01.com/api/Lottery/WinGoBet", body, { // https://h5.ar-lottery01.com/api/Lottery/WinGoBet
                 headers: {
@@ -958,12 +958,12 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
                 }
 
                 if (data_tong_tien_cuoc[item.usersname]) {
-                    data_tong_tien_cuoc[item.usersname] = data_tong_tien_cuoc[item.usersname] + body.betCount;
+                    data_tong_tien_cuoc[item.usersname] = data_tong_tien_cuoc[item.usersname] + body.betMultiple;
                 } else {
-                    data_tong_tien_cuoc[item.usersname] = body.betCount;
+                    data_tong_tien_cuoc[item.usersname] = body.betMultiple;
                 }
 
-                bot.sendMessage(item.tele_id, `✅ Đã đặt cược VN-GO  1 ${body.selectType == 13 ? "Lớn" : "Nhỏ"} - ${body.betCount}000đ - Kỳ xổ ${issuenumber}`,)
+                bot.sendMessage(item.tele_id, `✅ Đã đặt cược VN-GO  1 ${body.selectType == 13 ? "Lớn" : "Nhỏ"} - ${body.betMultiple}000đ - Kỳ xổ ${issuenumber}`,)
             } else {
                 //  đặt cược lỗi
                 let msg = result.data.msg
@@ -1045,9 +1045,9 @@ async function ketqua_run_bot(ketqua, item, bot, Number_one) {
         await delay(200)
         if (element.selectType == ketqua) {
             if (data_loi_nhuan[element.usersname]) {
-                data_loi_nhuan[element.usersname] = data_loi_nhuan[element.usersname] + Math.round(parseInt(element.betCount) * 0.96 * 1000)
+                data_loi_nhuan[element.usersname] = data_loi_nhuan[element.usersname] + Math.round(parseInt(element.betMultiple) * 0.96 * 1000)
             } else {
-                data_loi_nhuan[element.usersname] = Math.round(parseInt(element.betCount) * 0.96 * 1000)
+                data_loi_nhuan[element.usersname] = Math.round(parseInt(element.betMultiple) * 0.96 * 1000)
             }
             //  chọn đúng
             if (element.caidca == 'thang') {
@@ -1063,7 +1063,7 @@ async function ketqua_run_bot(ketqua, item, bot, Number_one) {
             // let soduhientai = await getsodu_hien_tai(element.token)
 
 
-            bot.sendMessage(element.chatId, `🟢 Chúc mừng bạn đã thắng ${Math.round(parseInt(element.betCount) * 0.96 * 1000)}đ VN-GO  1 kì ${element.issuenumber}
+            bot.sendMessage(element.chatId, `🟢 Chúc mừng bạn đã thắng ${Math.round(parseInt(element.betMultiple) * 0.96 * 1000)}đ VN-GO  1 kì ${element.issuenumber}
 Tổng lợi nhuận: ${data_loi_nhuan[element.usersname]}đ
 Tổng tiền cược:  ${data_tong_tien_cuoc[element.usersname] ? data_tong_tien_cuoc[element.usersname] + '000' : ''}đ`)
             // await db('lichsu_ma').insert({
@@ -1072,7 +1072,7 @@ Tổng tiền cược:  ${data_tong_tien_cuoc[element.usersname] ? data_tong_tie
             //     "gametype": element.gametype,
             //     "typeid": element.typeid,
             //     "amount": element.amount,
-            //     "betcount": element.betcount,
+            //     "betcount": element.betMultiple,
             //     "issuenumber": element.issuenumber,
             //     "ketqua": Number_one,
             //     "selecttype": element.selecttype,
@@ -1094,9 +1094,9 @@ Tổng tiền cược:  ${data_tong_tien_cuoc[element.usersname] ? data_tong_tie
             // kết quả sai
             // 🔴 Rất tiếc bạn đã thua 10000
             if (data_loi_nhuan[element.usersname]) {
-                data_loi_nhuan[element.usersname] = data_loi_nhuan[element.usersname] - parseInt(element.betCount) * 1000
+                data_loi_nhuan[element.usersname] = data_loi_nhuan[element.usersname] - parseInt(element.betMultiple) * 1000
             } else {
-                data_loi_nhuan[element.usersname] = -parseInt(element.betCount) * 1000
+                data_loi_nhuan[element.usersname] = -parseInt(element.betMultiple) * 1000
             }
             if (element.caidca == 'thua') {
                 if (data_bet[element.usersname] >= (element.chienluoc_von.length - 1)) {
@@ -1109,14 +1109,14 @@ Tổng tiền cược:  ${data_tong_tien_cuoc[element.usersname] ? data_tong_tie
                 data_bet[element.usersname] = 0
             }
 
-            bot.sendMessage(element.chatId, `🔴 Rất tiếc bạn đã thua ${element.betCount}000đ VN-GO  1 kì ${element.issuenumber}`)
+            bot.sendMessage(element.chatId, `🔴 Rất tiếc bạn đã thua ${element.betMultiple}000đ VN-GO  1 kì ${element.issuenumber}`)
             // await db('lichsu_ma').insert({
             //     "uid": element.uid,
             //     "usersid": element.id,
             //     "gametype": element.gametype,
             //     "typeid": element.typeid,
             //     "amount": element.amount,
-            //     "betcount": element.betcount,
+            //     "betcount": element.betMultiple,
             //     "issuenumber": element.issuenumber,
             //     "ketqua": Number_one,
             //     "selecttype": element.selecttype,
