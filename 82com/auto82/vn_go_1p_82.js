@@ -243,7 +243,7 @@ async function test(bot) {
             },
 
         })
-
+  console.log('aa ',data.data)
         if (data.data && data.data.code == 0) {
             let datalist = data.data.data
 
