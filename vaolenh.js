@@ -83,6 +83,7 @@ async function vaolenhtaikhoan(token, issuenumber) {
         
 
     } catch (error) {
+        console.log('err ',error)
        
             // c
           

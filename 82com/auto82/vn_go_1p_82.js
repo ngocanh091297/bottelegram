@@ -883,7 +883,6 @@ async function vaolenhtaikhoan(item, element, issuenumber, bot) {
             issuenumber: issuenumber,
             language:'vi',
             random: It(),
-          
             timestamp: getTime_now(),
         
         }
